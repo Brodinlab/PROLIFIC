@@ -39,7 +39,7 @@ set.seed(42)
 cvfit <- cv.glmnet(x, y, family = "binomial", alpha = 1, nfolds = 5, type.measure = "auc")
 
 # Fig 4b -------------------------------------------------------------------
-pdf(sprintf("figures/Fig4/Fig4b.pdf"))
+pdf(sprintf("figures/Fig3/Fig3b.pdf"))
 plot(cvfit)
 dev.off()
 
@@ -104,7 +104,7 @@ lasso_features %>%
         ),
         legend.position = "top"
     )
-ggsave("figures/Fig4/Fig4c.pdf", width = 10, height = 6)
+ggsave("figures/Fig3/Fig3c.pdf", width = 10, height = 6)
 
 # Fig 4d -------------------------------------------------------------------
 
@@ -142,4 +142,4 @@ plots <- p_values %>%
     })
 
 ggarrange(plotlist = plots, ncol = 4, nrow = 4) %>%
-    ggexport(filename = "figures/Fig4/Fig4d.pdf", width = 20, height = 20)
+    ggexport(filename = "figures/Fig3/Fig3d.pdf", width = 20, height = 20)

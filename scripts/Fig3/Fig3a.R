@@ -117,6 +117,6 @@ g_rainplot <- g_rainplot +
 
 g_rainplot
 
-ggsave("figures/Fig4/Fig4a.pdf", plot = g_rainplot, width = 8, height = 8)
+ggsave("figures/Fig3/Fig3a.pdf", plot = g_rainplot, width = 8, height = 8)
 
 write_csv(df_score_qc, "data/df_composite_score_0.75.csv")
